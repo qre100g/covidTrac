@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import FetchingData, { FetchAllData } from './Components/FetchData';
+import img from './Images/covidImage.jpeg';
+import image from './Images/covidImage1.jpeg';
+import img2 from './Images/covid2.jpeg';
+import { useEffect, useState } from 'react';
+
 
 function App() {
+  const [val, setVal] = useState('');
+  const [countryName, setName] = useState();
+  const [doFetch, setDoFetch] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={img2} alt='Covid' width='100%' height= '250px' />
+      <FetchAllData />
     </div>
   );
 }
